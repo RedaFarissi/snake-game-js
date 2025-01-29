@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake game</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container mt-5"> 
+        <h1 class="mb-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"> Snake Game </h1>
+        <div class="row">
+            <div class="col-8">
+                <table id="table" class="bg-danger">      </table>
+            </div>
+            <div class="col-4 pt-3 ps-5" style="border-left: 5px solid black ;"> 
+                <h4> Score : <span id="score">2</span></h4> 
+            </div>
+        </div>
+    </div>
+    <div id="game-over-back-ground">
+        <div class="container fs-1 text-danger border border-danger border-4 bg-white rounded" id="end-game">  
+            Game Over
+        </div>
+    </div>
+
+    <script src="./logic.js">    </script>
+
+</body>
+</html>
