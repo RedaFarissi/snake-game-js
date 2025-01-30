@@ -114,11 +114,10 @@ const interval = setInterval( ()=>{
     if( direction == 'right' ){
         if( Number(y) < 17){
             add_one_to_right = Number(y) + 1   
-            position.push( x + '-' + add_one_to_right );
-                  
+            position.push( x + '-' + add_one_to_right);
             doda.head = x + '-' + add_one_to_right
         }else{
-            //game_over();
+            game_over();
             clearInterval(interval)
         }
     }else if( direction == 'left' ){
@@ -127,7 +126,7 @@ const interval = setInterval( ()=>{
             position.push( x + '-' + remove_one_to_left )
             doda.head = x + '-' + remove_one_to_left
         }else{
-            //game_over();
+            game_over();
             clearInterval(interval)
         }
     }else if( direction == 'top' ){
@@ -136,7 +135,7 @@ const interval = setInterval( ()=>{
             position.push( remove_one_to_top + '-' + y )
             doda.head = remove_one_to_top + '-' + y
         }else{
-            //game_over();
+            game_over();
             clearInterval(interval)
         }
     }else if( direction == 'bottom' ){
@@ -145,7 +144,7 @@ const interval = setInterval( ()=>{
             position.push( add_one_to_bottom + '-' + y )
             doda.head = add_one_to_bottom + '-' + y
         }else{
-            //game_over();
+            game_over();
             clearInterval(interval)
         }
     }
@@ -160,23 +159,18 @@ const interval = setInterval( ()=>{
     
     document.getElementById( doda.eat_position ).style.backgroundColor = "green";
 },200);
-
-document.addEventListener('keydown', function(event) {
-    console.log(event.key)
+    document.addEventListener('keydown', function(event) {
 });
-
-
-
 
 document.addEventListener('keydown', function(event) {
     switch(event.key) {
         case 'ArrowUp': 
-            if( doda.direction !== "bottom"  ) doda.direction = "top"; break;
+            if( doda.direction !== "bottom"  ) doda.direction = "top";    break;
         case 'ArrowDown': 
-            if( doda.direction !== "top"  ) doda.direction = "bottom"; break;
+            if( doda.direction !== "top"  )    doda.direction = "bottom"; break;
         case 'ArrowLeft':
-            if( doda.direction !== "right"  ) doda.direction = "left"; break;
+            if( doda.direction !== "right"  )  doda.direction = "left";   break;
         case 'ArrowRight': 
-            if( doda.direction !== "left"  )doda.direction = "right"; break;
+            if( doda.direction !== "left"  )   doda.direction = "right";  break;
     }
 });
